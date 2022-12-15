@@ -51,7 +51,11 @@ struct JVMListView: View {
         }
         .toolbar {
             Button {
-                model.reload()
+                do {
+                    try model.reload()
+                } catch {
+                    // TODO
+                }
             } label: {
                 Image(systemName: "arrow.clockwise")
             }
@@ -59,7 +63,7 @@ struct JVMListView: View {
             Button {
                 do {
                     try model.selectJvm(id: selected!)
-                    model.reload()
+                    try model.reload()
                 } catch {
                     // TODO
                 }

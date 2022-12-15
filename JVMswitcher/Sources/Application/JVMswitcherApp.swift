@@ -38,7 +38,7 @@ struct JVMswitcherApp: App {
     private var model: InstalledJavaVirtualMachinesModel = {
         let model = InstalledJavaVirtualMachinesModel()
         
-        model.reload()
+        try? model.reload()
         
         return model
     }()
