@@ -18,6 +18,7 @@
 //  limitations under the License.
 //
 
+import AlertToast
 import SwiftUI
 
 struct JVMListView: View {
@@ -54,7 +55,7 @@ struct JVMListView: View {
                 do {
                     try model.reload()
                 } catch {
-                    // TODO
+                    show(message: "Can't load the installed JVMs.", error: error)
                 }
             } label: {
                 Image(systemName: "arrow.clockwise")
@@ -62,15 +63,29 @@ struct JVMListView: View {
             
             Button {
                 do {
+                    let showInfo = selected != model.selectedJvm
+
                     try model.selectJvm(id: selected!)
                     try model.reload()
+
+                    if showInfo {
+                        show(info: "JVM selected.")
+                    }
                 } catch {
-                    // TODO
+                    show(message: "Selecting the JVM failed.", error: error)
                 }
             } label: {
                 Image(systemName: "checkmark.circle")
             }
             .disabled(selected == nil)
+        }
+        .toast(isPresenting: $showToast) {
+            AlertToast(
+                displayMode: toastData?.displayMode ?? .alert,
+                type: toastData?.alertType ?? .regular,
+                title: toastData?.title,
+                subTitle: toastData?.subtitle,
+                style: toastData?.style)
         }
     }
     
@@ -79,9 +94,34 @@ struct JVMListView: View {
     
     @State
     private var selected: String? = nil
+    @State
+    private var showToast = false
+    @State
+    private var toastData: ToastData?
     
     @EnvironmentObject
     private var model: InstalledJavaVirtualMachinesModel
+
+
+    // MARK: - Private Methods
+
+    private func show(message: String, error: Error) {
+        toastData = ToastData(
+            displayMode: .alert,
+            alertType: .error(.red),
+            title: "Error",
+            subtitle: "\(message)\n\(error.localizedDescription)")
+        showToast = true
+    }
+
+    private func show(info message: String) {
+        toastData = ToastData(
+            displayMode: .banner(.slide),
+            alertType: .complete(.green),
+            title: "Information",
+            subtitle: "\(message)")
+        showToast = true
+    }
 }
 
 struct JVMListView_Previews: PreviewProvider {

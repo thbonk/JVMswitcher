@@ -76,7 +76,9 @@ class InstalledJavaVirtualMachinesModel: ObservableObject {
     
     func selectJvm(id: String) throws {
         if id != selectedJvm {
-            try FileManager.default.removeItem(at: URL.currentJvmLink)
+            if FileManager.default.fileExists(atPath: URL.currentJvmLink.path()) {
+                try FileManager.default.removeItem(at: URL.currentJvmLink)
+            }
             try FileManager.default.createSymbolicLink(at: URL.currentJvmLink, withDestinationURL: URL(filePath: id))
         }
     }

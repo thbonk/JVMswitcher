@@ -13,6 +13,9 @@
 		B3DDB541294B0E8600C16BB8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DDB540294B0E8600C16BB8 /* ContentView.swift */; };
 		B3DDB543294B0E8900C16BB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3DDB542294B0E8900C16BB8 /* Assets.xcassets */; };
 		B3DDB546294B0E8900C16BB8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3DDB545294B0E8900C16BB8 /* Preview Assets.xcassets */; };
+		E9D3B714294C536400AE73A2 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E9D3B713294C536400AE73A2 /* Credits.rtf */; };
+		E9D3B71A294C699B00AE73A2 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = E9D3B719294C699B00AE73A2 /* AlertToast */; };
+		E9D3B71C294C6AFF00AE73A2 /* ToastData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D3B71B294C6AFF00AE73A2 /* ToastData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,8 @@
 		B3DDB545294B0E8900C16BB8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B3DDB547294B0E8900C16BB8 /* JVMswitcher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JVMswitcher.entitlements; sourceTree = "<group>"; };
 		B3DDB54D294B0EBF00C16BB8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E9D3B713294C536400AE73A2 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		E9D3B71B294C6AFF00AE73A2 /* ToastData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9D3B71A294C699B00AE73A2 /* AlertToast in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				B3B689A4294B458D00419357 /* InstalledJavaVirtualMachinesModel.swift */,
+				E9D3B71B294C6AFF00AE73A2 /* ToastData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -98,8 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				B3B689A0294B449100419357 /* Sources */,
-				B3DDB542294B0E8900C16BB8 /* Assets.xcassets */,
-				B3DDB547294B0E8900C16BB8 /* JVMswitcher.entitlements */,
+				E9D3B712294C533600AE73A2 /* Resources */,
 				B3DDB544294B0E8900C16BB8 /* Preview Content */,
 			);
 			path = JVMswitcher;
@@ -111,6 +117,16 @@
 				B3DDB545294B0E8900C16BB8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E9D3B712294C533600AE73A2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B3DDB542294B0E8900C16BB8 /* Assets.xcassets */,
+				B3DDB547294B0E8900C16BB8 /* JVMswitcher.entitlements */,
+				E9D3B713294C536400AE73A2 /* Credits.rtf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +145,9 @@
 			dependencies = (
 			);
 			name = JVMswitcher;
+			packageProductDependencies = (
+				E9D3B719294C699B00AE73A2 /* AlertToast */,
+			);
 			productName = JVMswitcher;
 			productReference = B3DDB53B294B0E8600C16BB8 /* JVMswitcher.app */;
 			productType = "com.apple.product-type.application";
@@ -157,6 +176,9 @@
 				Base,
 			);
 			mainGroup = B3DDB532294B0E8600C16BB8;
+			packageReferences = (
+				E9D3B718294C699B00AE73A2 /* XCRemoteSwiftPackageReference "AlertToast" */,
+			);
 			productRefGroup = B3DDB53C294B0E8600C16BB8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -172,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3DDB546294B0E8900C16BB8 /* Preview Assets.xcassets in Resources */,
+				E9D3B714294C536400AE73A2 /* Credits.rtf in Resources */,
 				B3DDB543294B0E8900C16BB8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,6 +208,7 @@
 			files = (
 				B3B689A7294B4BD900419357 /* JVMListView.swift in Sources */,
 				B3DDB541294B0E8600C16BB8 /* ContentView.swift in Sources */,
+				E9D3B71C294C6AFF00AE73A2 /* ToastData.swift in Sources */,
 				B3B689A5294B458D00419357 /* InstalledJavaVirtualMachinesModel.swift in Sources */,
 				B3DDB53F294B0E8600C16BB8 /* JVMswitcherApp.swift in Sources */,
 			);
@@ -382,6 +406,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E9D3B718294C699B00AE73A2 /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E9D3B719294C699B00AE73A2 /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9D3B718294C699B00AE73A2 /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B3DDB533294B0E8600C16BB8 /* Project object */;
 }
