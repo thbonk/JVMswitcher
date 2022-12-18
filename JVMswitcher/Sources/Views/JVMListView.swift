@@ -37,12 +37,15 @@ struct JVMListView: View {
                         HStack(alignment: .center) {
                             Text(vm.name)
                                 .font(.title2).bold()
+                            Text("(\(vm.vendor))")
+                                .padding(.leading, 15)
                             Spacer()
                             Text(vm.version)
                         }
-                        
-                        HStack {
-                            Text(vm.vendor)
+
+                        HStack(alignment: .center) {
+                            Text(vm.path)
+                                .font(.footnote)
                             Spacer()
                         }
                     }
