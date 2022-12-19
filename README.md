@@ -12,9 +12,9 @@ that shall be used.
   export JAVA_HOME=$HOME/.currentJVM
   export PATH=$JAVA_HOME/bin:$PATH
   ```
-  
 - Start the application
-  - If macOS doesn't start the app, please follow [this guide](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/13.0/mac/13.0).
+  - If macOS doesn't start the app, please follow 
+    [this guide](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/13.0/mac/13.0).
 
 ## Implementation Details
 
