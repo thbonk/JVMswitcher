@@ -4,5 +4,7 @@
 <dict>
 	<key>com.apple.security.app-sandbox</key>
 	<false/>
+	<key>com.apple.application-identifier</key>
+	<string>com.github.thbonk.JVMswitcher-macOS</string>
 </dict>
 </plist>
