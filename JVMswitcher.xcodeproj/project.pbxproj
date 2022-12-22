@@ -16,6 +16,7 @@
 		E9D3B714294C536400AE73A2 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E9D3B713294C536400AE73A2 /* Credits.rtf */; };
 		E9D3B71A294C699B00AE73A2 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = E9D3B719294C699B00AE73A2 /* AlertToast */; };
 		E9D3B71C294C6AFF00AE73A2 /* ToastData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D3B71B294C6AFF00AE73A2 /* ToastData.swift */; };
+		E9E352E42951ADEC00C4217C /* JVMMenuBarExtra.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E352E32951ADEC00C4217C /* JVMMenuBarExtra.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B3DDB54D294B0EBF00C16BB8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E9D3B713294C536400AE73A2 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		E9D3B71B294C6AFF00AE73A2 /* ToastData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastData.swift; sourceTree = "<group>"; };
+		E9E352E32951ADEC00C4217C /* JVMMenuBarExtra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JVMMenuBarExtra.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			children = (
 				B3DDB540294B0E8600C16BB8 /* ContentView.swift */,
 				B3B689A6294B4BD900419357 /* JVMListView.swift */,
+				E9E352E32951ADEC00C4217C /* JVMMenuBarExtra.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3B689A7294B4BD900419357 /* JVMListView.swift in Sources */,
+				E9E352E42951ADEC00C4217C /* JVMMenuBarExtra.swift in Sources */,
 				B3DDB541294B0E8600C16BB8 /* ContentView.swift in Sources */,
 				E9D3B71C294C6AFF00AE73A2 /* ToastData.swift in Sources */,
 				B3B689A5294B458D00419357 /* InstalledJavaVirtualMachinesModel.swift in Sources */,

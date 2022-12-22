@@ -1,0 +1,2 @@
+Source: https://wiki.openjdk.org/display/duke/Gallery
+Created by Jeff Dinkins (https://wiki.openjdk.org/display/~jeff)
