@@ -35,6 +35,7 @@ struct JVMswitcherApp: App {
             JVMMenuBarExtra()
                 .environmentObject(model)
         }
+        .menuBarExtraStyle(.automatic)
     }
     
     

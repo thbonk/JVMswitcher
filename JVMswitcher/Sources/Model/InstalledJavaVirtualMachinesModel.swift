@@ -49,6 +49,10 @@ class InstalledJavaVirtualMachinesModel: ObservableObject {
     @Published
     private(set) var virtualMachines: [VirtualMachine] = []
     
+    // This is a dirty trick to trigger an update of all views
+    @Published
+    private(set) var updateCount = 0
+    
     var selectedJvm: String? {
         if let ok = try? URL.currentJvmLink.checkResourceIsReachable(), ok {
             let vals = try? URL.currentJvmLink.resourceValues(forKeys: [.isSymbolicLinkKey])
@@ -80,6 +84,10 @@ class InstalledJavaVirtualMachinesModel: ObservableObject {
                 try FileManager.default.removeItem(at: URL.currentJvmLink)
             }
             try FileManager.default.createSymbolicLink(at: URL.currentJvmLink, withDestinationURL: URL(filePath: id))
+            
+            DispatchQueue.main.async {
+                self.updateCount += 1
+            }
         }
     }
     
