@@ -30,6 +30,12 @@ struct JVMswitcherApp: App {
             ContentView()
                 .environmentObject(model)
         }
+
+        MenuBarExtra("JVMswitcher", image: "JavaIcon") {
+            JVMMenuBarExtra()
+                .environmentObject(model)
+        }
+        .menuBarExtraStyle(.automatic)
     }
     
     
