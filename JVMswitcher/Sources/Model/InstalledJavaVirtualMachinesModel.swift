@@ -78,7 +78,7 @@ class InstalledJavaVirtualMachinesModel: ObservableObject {
     
     // MARK: - Public Methods
     
-    func selectJvm(id: String) throws {
+    func selectJvm(id: String) throws -> VirtualMachine? {
         if id != selectedJvm {
             if FileManager.default.fileExists(atPath: URL.currentJvmLink.path()) {
                 try FileManager.default.removeItem(at: URL.currentJvmLink)
@@ -88,7 +88,11 @@ class InstalledJavaVirtualMachinesModel: ObservableObject {
             DispatchQueue.main.async {
                 self.updateCount += 1
             }
+
+            return virtualMachines.first { vm in vm.id == id }
         }
+
+        return nil
     }
     
     func reload() throws {

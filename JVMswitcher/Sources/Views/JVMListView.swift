@@ -58,7 +58,9 @@ struct JVMListView: View {
                 do {
                     try model.reload()
                 } catch {
-                    show(message: "Can't load the installed JVMs.", error: error)
+                    Notification
+                        .error(message: "Can't load the installed JVMs.", error: error)
+                        .show()
                 }
             } label: {
                 Image(systemName: "arrow.clockwise")
@@ -68,27 +70,23 @@ struct JVMListView: View {
                 do {
                     let showInfo = selected != model.selectedJvm
 
-                    try model.selectJvm(id: selected!)
+                    let selectedVm = try model.selectJvm(id: selected!)
                     try model.reload()
 
-                    if showInfo {
-                        show(info: "JVM selected.")
+                    if let selectedVm, showInfo {
+                        Notification
+                            .info(message: "JVM \(selectedVm.name) selected.")
+                            .show()
                     }
                 } catch {
-                    show(message: "Selecting the JVM failed.", error: error)
+                    Notification
+                        .error(message: "Selecting the JVM failed.", error: error)
+                        .show()
                 }
             } label: {
                 Image(systemName: "checkmark.circle")
             }
             .disabled(selected == nil)
-        }
-        .toast(isPresenting: $showToast) {
-            AlertToast(
-                displayMode: toastData?.displayMode ?? .alert,
-                type: toastData?.alertType ?? .regular,
-                title: toastData?.title,
-                subTitle: toastData?.subtitle,
-                style: toastData?.style)
         }
     }
     
@@ -97,34 +95,9 @@ struct JVMListView: View {
     
     @State
     private var selected: String? = nil
-    @State
-    private var showToast = false
-    @State
-    private var toastData: ToastData?
     
     @EnvironmentObject
     private var model: InstalledJavaVirtualMachinesModel
-
-
-    // MARK: - Private Methods
-
-    private func show(message: String, error: Error) {
-        toastData = ToastData(
-            displayMode: .alert,
-            alertType: .error(.red),
-            title: "Error",
-            subtitle: "\(message)\n\(error.localizedDescription)")
-        showToast = true
-    }
-
-    private func show(info message: String) {
-        toastData = ToastData(
-            displayMode: .banner(.slide),
-            alertType: .complete(.green),
-            title: "Information",
-            subtitle: "\(message)")
-        showToast = true
-    }
 }
 
 struct JVMListView_Previews: PreviewProvider {

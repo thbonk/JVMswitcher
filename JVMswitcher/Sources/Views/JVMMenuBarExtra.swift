@@ -48,7 +48,22 @@ struct JVMMenuBarExtra: View {
             id == model.selectedJvm
         } set: { value in
             if value {
-                try? model.selectJvm(id: id)
+                do {
+                    let showInfo = id != model.selectedJvm
+
+                    let selectedVm = try model.selectJvm(id: id)
+                    try model.reload()
+
+                    if let selectedVm, showInfo {
+                        Notification
+                            .info(message: "JVM \(selectedVm.name) selected.")
+                            .show()
+                    }
+                } catch {
+                    Notification
+                        .error(message: "Selecting the JVM failed.", error: error)
+                        .show()
+                }
             }
         }
     }
