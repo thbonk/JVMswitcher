@@ -19,6 +19,7 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 @main
 struct JVMswitcherApp: App {
@@ -48,4 +49,19 @@ struct JVMswitcherApp: App {
         
         return model
     }()
+
+
+    // MARK: - Initialization
+
+    public init() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert]) { granted, error in
+            if let error {
+                NSLog("Error when requesting notification authorization: \(error)")
+            }
+
+            if !granted {
+                NSLog("Not authorized to show notifications.")
+            }
+        }
+    }
 }
