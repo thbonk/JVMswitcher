@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "launchatlogin-modern",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sindresorhus/LaunchAtLogin-Modern",
+      "state" : {
+        "branch" : "main",
+        "revision" : "9c41991631605c8ccfe0347bbcb5c659169f2ec5"
+      }
+    },
+    {
+      "identity" : "swiftkeys",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jordanbaird/SwiftKeys",
+      "state" : {
+        "revision" : "4eacc584762335f7f6f3deb0610ac8f2fa8f8ebf",
+        "version" : "0.1.7"
+      }
+    }
+  ],
+  "version" : 2
+}

@@ -14,9 +14,11 @@
 		B3DDB543294B0E8900C16BB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3DDB542294B0E8900C16BB8 /* Assets.xcassets */; };
 		B3DDB546294B0E8900C16BB8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3DDB545294B0E8900C16BB8 /* Preview Assets.xcassets */; };
 		E9D3B714294C536400AE73A2 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E9D3B713294C536400AE73A2 /* Credits.rtf */; };
-		E9D3B71C294C6AFF00AE73A2 /* ToastData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D3B71B294C6AFF00AE73A2 /* ToastData.swift */; };
 		E9E352E42951ADEC00C4217C /* JVMMenuBarExtra.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E352E32951ADEC00C4217C /* JVMMenuBarExtra.swift */; };
 		E9E353042966A49E00C4217C /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E353032966A49E00C4217C /* Notification.swift */; };
+		E9E35306296D7ECC00C4217C /* ApplicationSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E35305296D7ECC00C4217C /* ApplicationSettingsView.swift */; };
+		E9E35309296D7FCF00C4217C /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = E9E35308296D7FCF00C4217C /* LaunchAtLogin */; };
+		E9E3530C296D83DA00C4217C /* SwiftKeys in Frameworks */ = {isa = PBXBuildFile; productRef = E9E3530B296D83DA00C4217C /* SwiftKeys */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,9 +34,9 @@
 		B3DDB547294B0E8900C16BB8 /* JVMswitcher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JVMswitcher.entitlements; sourceTree = "<group>"; };
 		B3DDB54D294B0EBF00C16BB8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E9D3B713294C536400AE73A2 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
-		E9D3B71B294C6AFF00AE73A2 /* ToastData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastData.swift; sourceTree = "<group>"; };
 		E9E352E32951ADEC00C4217C /* JVMMenuBarExtra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JVMMenuBarExtra.swift; sourceTree = "<group>"; };
 		E9E353032966A49E00C4217C /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		E9E35305296D7ECC00C4217C /* ApplicationSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationSettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9E3530C296D83DA00C4217C /* SwiftKeys in Frameworks */,
+				E9E35309296D7FCF00C4217C /* LaunchAtLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +76,7 @@
 				B3DDB540294B0E8600C16BB8 /* ContentView.swift */,
 				B3B689A6294B4BD900419357 /* JVMListView.swift */,
 				E9E352E32951ADEC00C4217C /* JVMMenuBarExtra.swift */,
+				E9E35305296D7ECC00C4217C /* ApplicationSettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -80,7 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				B3B689A4294B458D00419357 /* InstalledJavaVirtualMachinesModel.swift */,
-				E9D3B71B294C6AFF00AE73A2 /* ToastData.swift */,
 				E9E353032966A49E00C4217C /* Notification.swift */,
 			);
 			path = Model;
@@ -150,6 +154,8 @@
 			);
 			name = JVMswitcher;
 			packageProductDependencies = (
+				E9E35308296D7FCF00C4217C /* LaunchAtLogin */,
+				E9E3530B296D83DA00C4217C /* SwiftKeys */,
 			);
 			productName = JVMswitcher;
 			productReference = B3DDB53B294B0E8600C16BB8 /* JVMswitcher.app */;
@@ -180,6 +186,8 @@
 			);
 			mainGroup = B3DDB532294B0E8600C16BB8;
 			packageReferences = (
+				E9E35307296D7FCF00C4217C /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */,
+				E9E3530A296D83DA00C4217C /* XCRemoteSwiftPackageReference "SwiftKeys" */,
 			);
 			productRefGroup = B3DDB53C294B0E8600C16BB8 /* Products */;
 			projectDirPath = "";
@@ -208,11 +216,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9E35306296D7ECC00C4217C /* ApplicationSettingsView.swift in Sources */,
 				B3B689A7294B4BD900419357 /* JVMListView.swift in Sources */,
 				E9E352E42951ADEC00C4217C /* JVMMenuBarExtra.swift in Sources */,
 				B3DDB541294B0E8600C16BB8 /* ContentView.swift in Sources */,
 				E9E353042966A49E00C4217C /* Notification.swift in Sources */,
-				E9D3B71C294C6AFF00AE73A2 /* ToastData.swift in Sources */,
 				B3B689A5294B458D00419357 /* InstalledJavaVirtualMachinesModel.swift in Sources */,
 				B3DDB53F294B0E8600C16BB8 /* JVMswitcherApp.swift in Sources */,
 			);
@@ -422,6 +430,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E9E35307296D7FCF00C4217C /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin-Modern";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		E9E3530A296D83DA00C4217C /* XCRemoteSwiftPackageReference "SwiftKeys" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jordanbaird/SwiftKeys";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E9E35308296D7FCF00C4217C /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9E35307296D7FCF00C4217C /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */;
+			productName = LaunchAtLogin;
+		};
+		E9E3530B296D83DA00C4217C /* SwiftKeys */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9E3530A296D83DA00C4217C /* XCRemoteSwiftPackageReference "SwiftKeys" */;
+			productName = SwiftKeys;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B3DDB533294B0E8600C16BB8 /* Project object */;
 }

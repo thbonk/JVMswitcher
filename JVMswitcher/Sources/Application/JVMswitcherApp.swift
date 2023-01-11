@@ -3,7 +3,7 @@
 //  JVMswitcher
 //
 //  Created by Thomas Bonk on 15.12.22.
-//  Copyright 2022 Thomas Bonk <thomas@meandmymac.de>
+//  Copyright 2022, 2023 Thomas Bonk <thomas@meandmymac.de>
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -37,6 +37,10 @@ struct JVMswitcherApp: App {
                 .environmentObject(model)
         }
         .menuBarExtraStyle(.automatic)
+
+        Settings {
+            ApplicationSettingsView()
+        }
     }
     
     
