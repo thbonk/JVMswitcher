@@ -18,6 +18,8 @@
 //  limitations under the License.
 //
 
+import AppKit
+import SwiftKeys
 import SwiftUI
 import UserNotifications
 
@@ -54,6 +56,8 @@ struct JVMswitcherApp: App {
         return model
     }()
 
+    private let showJvmSelectHud = KeyCommand(name: .ToggleJVMListHud)
+
 
     // MARK: - Initialization
 
@@ -66,6 +70,10 @@ struct JVMswitcherApp: App {
             if !granted {
                 NSLog("Not authorized to show notifications.")
             }
+        }
+
+        showJvmSelectHud.observe(.keyDown) {
+            
         }
     }
 }
