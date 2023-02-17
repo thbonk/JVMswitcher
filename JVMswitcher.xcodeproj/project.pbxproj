@@ -8,31 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		B3B689A5294B458D00419357 /* InstalledJavaVirtualMachinesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B689A4294B458D00419357 /* InstalledJavaVirtualMachinesModel.swift */; };
-		B3B689A7294B4BD900419357 /* JVMListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B689A6294B4BD900419357 /* JVMListView.swift */; };
 		B3DDB53F294B0E8600C16BB8 /* JVMswitcherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DDB53E294B0E8600C16BB8 /* JVMswitcherApp.swift */; };
-		B3DDB541294B0E8600C16BB8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DDB540294B0E8600C16BB8 /* ContentView.swift */; };
 		B3DDB543294B0E8900C16BB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3DDB542294B0E8900C16BB8 /* Assets.xcassets */; };
 		B3DDB546294B0E8900C16BB8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3DDB545294B0E8900C16BB8 /* Preview Assets.xcassets */; };
+		E9A5F886299F544D0045EBF0 /* NSApplication+standardPanels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A5F885299F544D0045EBF0 /* NSApplication+standardPanels.swift */; };
 		E9D3B714294C536400AE73A2 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E9D3B713294C536400AE73A2 /* Credits.rtf */; };
 		E9E352E42951ADEC00C4217C /* JVMMenuBarExtra.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E352E32951ADEC00C4217C /* JVMMenuBarExtra.swift */; };
 		E9E353042966A49E00C4217C /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E353032966A49E00C4217C /* Notification.swift */; };
 		E9E35306296D7ECC00C4217C /* ApplicationSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E35305296D7ECC00C4217C /* ApplicationSettingsView.swift */; };
 		E9E35309296D7FCF00C4217C /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = E9E35308296D7FCF00C4217C /* LaunchAtLogin */; };
-		E9E3530C296D83DA00C4217C /* SwiftKeys in Frameworks */ = {isa = PBXBuildFile; productRef = E9E3530B296D83DA00C4217C /* SwiftKeys */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B3B6899F294B444500419357 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B3B689A4294B458D00419357 /* InstalledJavaVirtualMachinesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstalledJavaVirtualMachinesModel.swift; sourceTree = "<group>"; };
-		B3B689A6294B4BD900419357 /* JVMListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JVMListView.swift; sourceTree = "<group>"; };
 		B3B689A8294B62F200419357 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		B3DDB53B294B0E8600C16BB8 /* JVMswitcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JVMswitcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3DDB53E294B0E8600C16BB8 /* JVMswitcherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JVMswitcherApp.swift; sourceTree = "<group>"; };
-		B3DDB540294B0E8600C16BB8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B3DDB542294B0E8900C16BB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3DDB545294B0E8900C16BB8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B3DDB547294B0E8900C16BB8 /* JVMswitcher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JVMswitcher.entitlements; sourceTree = "<group>"; };
 		B3DDB54D294B0EBF00C16BB8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E9A5F885299F544D0045EBF0 /* NSApplication+standardPanels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSApplication+standardPanels.swift"; sourceTree = "<group>"; };
 		E9D3B713294C536400AE73A2 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		E9E352E32951ADEC00C4217C /* JVMMenuBarExtra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JVMMenuBarExtra.swift; sourceTree = "<group>"; };
 		E9E353032966A49E00C4217C /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
@@ -44,7 +41,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9E3530C296D83DA00C4217C /* SwiftKeys in Frameworks */,
 				E9E35309296D7FCF00C4217C /* LaunchAtLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,6 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				B3B689A1294B449C00419357 /* Application */,
+				E9A5F883299F541B0045EBF0 /* Extensions */,
 				B3B689A3294B44AA00419357 /* Model */,
 				B3B689A2294B44A400419357 /* Views */,
 			);
@@ -73,8 +70,6 @@
 		B3B689A2294B44A400419357 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B3DDB540294B0E8600C16BB8 /* ContentView.swift */,
-				B3B689A6294B4BD900419357 /* JVMListView.swift */,
 				E9E352E32951ADEC00C4217C /* JVMMenuBarExtra.swift */,
 				E9E35305296D7ECC00C4217C /* ApplicationSettingsView.swift */,
 			);
@@ -127,6 +122,22 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		E9A5F883299F541B0045EBF0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E9A5F884299F54300045EBF0 /* AppKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E9A5F884299F54300045EBF0 /* AppKit */ = {
+			isa = PBXGroup;
+			children = (
+				E9A5F885299F544D0045EBF0 /* NSApplication+standardPanels.swift */,
+			);
+			path = AppKit;
+			sourceTree = "<group>";
+		};
 		E9D3B712294C533600AE73A2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,7 +166,6 @@
 			name = JVMswitcher;
 			packageProductDependencies = (
 				E9E35308296D7FCF00C4217C /* LaunchAtLogin */,
-				E9E3530B296D83DA00C4217C /* SwiftKeys */,
 			);
 			productName = JVMswitcher;
 			productReference = B3DDB53B294B0E8600C16BB8 /* JVMswitcher.app */;
@@ -187,7 +197,6 @@
 			mainGroup = B3DDB532294B0E8600C16BB8;
 			packageReferences = (
 				E9E35307296D7FCF00C4217C /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */,
-				E9E3530A296D83DA00C4217C /* XCRemoteSwiftPackageReference "SwiftKeys" */,
 			);
 			productRefGroup = B3DDB53C294B0E8600C16BB8 /* Products */;
 			projectDirPath = "";
@@ -217,9 +226,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9E35306296D7ECC00C4217C /* ApplicationSettingsView.swift in Sources */,
-				B3B689A7294B4BD900419357 /* JVMListView.swift in Sources */,
+				E9A5F886299F544D0045EBF0 /* NSApplication+standardPanels.swift in Sources */,
 				E9E352E42951ADEC00C4217C /* JVMMenuBarExtra.swift in Sources */,
-				B3DDB541294B0E8600C16BB8 /* ContentView.swift in Sources */,
 				E9E353042966A49E00C4217C /* Notification.swift in Sources */,
 				B3B689A5294B458D00419357 /* InstalledJavaVirtualMachinesModel.swift in Sources */,
 				B3DDB53F294B0E8600C16BB8 /* JVMswitcherApp.swift in Sources */,
@@ -362,12 +370,13 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 2;
+				MARKETING_VERSION = 3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.thbonk.JVMswitcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -394,12 +403,13 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 2;
+				MARKETING_VERSION = 3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.thbonk.JVMswitcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -440,14 +450,6 @@
 				kind = branch;
 			};
 		};
-		E9E3530A296D83DA00C4217C /* XCRemoteSwiftPackageReference "SwiftKeys" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jordanbaird/SwiftKeys";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.7;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -455,11 +457,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E9E35307296D7FCF00C4217C /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */;
 			productName = LaunchAtLogin;
-		};
-		E9E3530B296D83DA00C4217C /* SwiftKeys */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E9E3530A296D83DA00C4217C /* XCRemoteSwiftPackageReference "SwiftKeys" */;
-			productName = SwiftKeys;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

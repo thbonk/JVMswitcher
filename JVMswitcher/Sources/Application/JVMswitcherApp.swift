@@ -18,6 +18,7 @@
 //  limitations under the License.
 //
 
+import AppKit
 import SwiftUI
 import UserNotifications
 
@@ -27,14 +28,21 @@ struct JVMswitcherApp: App {
     // MARK: - Public Properties
     
     var body: some Scene {
-        WindowGroup {
-            ContentView()
-                .environmentObject(model)
-        }
-
         MenuBarExtra("JVMswitcher", image: "JavaIcon") {
             JVMMenuBarExtra()
                 .environmentObject(model)
+            Divider()
+            Button("About JVMswitcher...") {
+                NSApp.showAboutPanel()
+            }
+            Divider()
+            Button("Settings...") {
+                NSApp.showAppSettings()
+            }
+            Divider()
+            Button("Quit JVMswitcher") {
+                NSApp.terminate(self)
+            }
         }
         .menuBarExtraStyle(.automatic)
 

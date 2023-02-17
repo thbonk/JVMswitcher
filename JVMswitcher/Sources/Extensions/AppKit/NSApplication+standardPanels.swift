@@ -1,8 +1,8 @@
 //
-//  ContentView.swift
+//  NSApplication+standardPanels.swift
 //  JVMswitcher
 //
-//  Created by Thomas Bonk on 15.12.22.
+//  Created by Thomas Bonk on 17.02.23.
 //  Copyright 2022, 2023 Thomas Bonk <thomas@meandmymac.de>
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,16 +18,26 @@
 //  limitations under the License.
 //
 
-import SwiftUI
+import AppKit
 
-struct ContentView: View {
-    var body: some View {
-        JVMListView()
-    }
-}
+extension NSApplication {
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    func showAppSettings() {
+        DispatchQueue.main.async {
+            NSApp.activate(ignoringOtherApps: true)
+        }
+        DispatchQueue.main.async {
+            NSApp.sendAction(Selector(("showSettingsWindow:")), to: nil, from: nil)
+        }
     }
+
+    func showAboutPanel() {
+        DispatchQueue.main.async {
+            NSApp.activate(ignoringOtherApps: true)
+        }
+        DispatchQueue.main.async {
+            NSApp.orderFrontStandardAboutPanel(self)
+        }
+    }
+
 }

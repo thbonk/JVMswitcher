@@ -19,33 +19,62 @@
 //
 
 import LaunchAtLogin
-import SwiftKeys
 import SwiftUI
-
-extension KeyCommand.Name {
-    static let ToggleJVMListHud = KeyCommand.Name("ToggleJVMListHud")
-}
 
 struct ApplicationSettingsView: View {
 
     // MARK: - Public Properties
     
     var body: some View {
-        TabView {
-            Group {
-                LaunchAtLogin.Toggle("Launch JVMswitcher on login")
-            }
-            .tabItem { Label("General", systemImage: "gear") }
+        VStack {
+            LaunchAtLogin.Toggle("Launch JVMswitcher on login")
+                .padding(.bottom, 20)
 
-            Group {
-                HStack {
-                    Text("Show JVM List HUD:")
-                    KeyRecorderView(name: .ToggleJVMListHud)
+            if !rescanInProgress {
+                Button("Rescan installed JVMs") {
+                    rescanJVMs()
                 }
+            } else {
+                ProgressView()
             }
-            .tabItem { Label("Hotkeys", systemImage: "keyboard") }
         }
         .frame(width: 450, height: 200)
+    }
+
+
+    // MARK: - Private Properties
+
+    @State
+    private var rescanInProgress = false
+
+
+    // MARK: - Private Methods
+
+    private func rescanJVMs() {
+        Task {
+            let task = Process()
+            task.launchPath = "/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister"
+            task.arguments = [
+                "-kill",
+                "-r",
+                "-domain", "local",
+                "-domain", "system",
+                "-domain", "user"
+            ]
+
+            task.launch()
+
+            DispatchQueue.main.async {
+                rescanInProgress = true
+            }
+
+            // Wait for the command to finish
+            task.waitUntilExit()
+
+            DispatchQueue.main.async {
+                rescanInProgress = false
+            }
+        }
     }
 }
 
