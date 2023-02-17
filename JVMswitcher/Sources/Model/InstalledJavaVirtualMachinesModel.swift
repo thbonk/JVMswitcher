@@ -41,6 +41,12 @@ class InstalledJavaVirtualMachinesModel: ObservableObject {
         var id: String {
             return path
         }
+
+        var exists: Bool {
+            var isDirectory = ObjCBool(false)
+
+            return FileManager.default.fileExists(atPath: path, isDirectory: &isDirectory) && isDirectory.boolValue
+        }
     }
     
     
@@ -93,6 +99,10 @@ class InstalledJavaVirtualMachinesModel: ObservableObject {
         }
 
         return nil
+    }
+
+    func jvm(with id: String) -> VirtualMachine? {
+        return virtualMachines.first { $0.id == id }
     }
     
     func reload() throws {

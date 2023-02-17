@@ -29,6 +29,7 @@ struct JVMList: View {
             ForEach(model.virtualMachines, id: \.id) { vm in
                 Toggle(isOn: jvmSelected(vm.id)) {
                     Text("\(vm.name) (\(vm.vendor))")
+                        .fontWeight(vm.exists ? .regular : .ultraLight)
                 }
             }
         }
@@ -44,28 +45,32 @@ struct JVMList: View {
     // MARK: - Private Methods
 
     private func jvmSelected(_ id: String) -> Binding<Bool> {
-        return Binding {
-            id == model.selectedJvm
-        } set: { value in
-            if value {
-                do {
-                    let showInfo = id != model.selectedJvm
+        if let ex = model.jvm(with: id)?.exists, ex {
+            return Binding {
+                id == model.selectedJvm
+            } set: { value in
+                if value {
+                    do {
+                        let showInfo = id != model.selectedJvm
 
-                    let selectedVm = try model.selectJvm(id: id)
-                    try model.reload()
+                        let selectedVm = try model.selectJvm(id: id)
+                        try model.reload()
 
-                    if let selectedVm, showInfo {
+                        if let selectedVm, showInfo {
+                            Notification
+                                .info(message: "JVM \(selectedVm.name) selected.")
+                                .show()
+                        }
+                    } catch {
                         Notification
-                            .info(message: "JVM \(selectedVm.name) selected.")
+                            .error(message: "Selecting the JVM failed.", error: error)
                             .show()
                     }
-                } catch {
-                    Notification
-                        .error(message: "Selecting the JVM failed.", error: error)
-                        .show()
                 }
             }
         }
+
+        return .constant(false)
     }
 }
 
