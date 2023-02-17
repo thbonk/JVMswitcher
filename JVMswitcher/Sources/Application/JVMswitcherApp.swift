@@ -22,6 +22,10 @@ import AppKit
 import SwiftUI
 import UserNotifications
 
+fileprivate extension String {
+    static let JVMInformationWindowId = "__JVMInformationWindowId__"
+}
+
 @main
 struct JVMswitcherApp: App {
     
@@ -29,13 +33,16 @@ struct JVMswitcherApp: App {
     
     var body: some Scene {
         MenuBarExtra("JVMswitcher", image: "JavaIcon") {
-            JVMMenuBarExtra()
+            JVMList()
                 .environmentObject(model)
             Divider()
             Button("About JVMswitcher...") {
                 NSApp.showAboutPanel()
             }
             Divider()
+            Button("Show JVM Informations...") {
+                open(windowId: .JVMInformationWindowId)
+            }
             Button("Settings...") {
                 NSApp.showAppSettings()
             }
@@ -45,6 +52,11 @@ struct JVMswitcherApp: App {
             }
         }
         .menuBarExtraStyle(.automatic)
+
+        Window("JVM Informations", id: .JVMInformationWindowId) {
+            JVMInformationView()
+                .environmentObject(model)
+        }
 
         Settings {
             ApplicationSettingsView()
@@ -62,6 +74,9 @@ struct JVMswitcherApp: App {
         return model
     }()
 
+    @Environment(\.openWindow)
+    private var openWindow
+
 
     // MARK: - Initialization
 
@@ -74,6 +89,20 @@ struct JVMswitcherApp: App {
             if !granted {
                 NSLog("Not authorized to show notifications.")
             }
+        }
+    }
+
+
+    // MARK: - Private Methods
+
+    private func open(windowId: String) {
+        openWindow(id: .JVMInformationWindowId)
+        activateApp()
+    }
+
+    private func activateApp() {
+        DispatchQueue.main.async {
+            NSApp.activate(ignoringOtherApps: true)
         }
     }
 }

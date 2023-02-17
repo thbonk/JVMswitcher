@@ -38,7 +38,7 @@ struct ApplicationSettingsView: View {
                 ProgressView()
             }
         }
-        .frame(width: 450, height: 200)
+        .padding()
     }
 
 
@@ -73,6 +73,7 @@ struct ApplicationSettingsView: View {
 
             DispatchQueue.main.async {
                 rescanInProgress = false
+                Notification.info(message: "Rescan of JVMs finished").show()
             }
         }
     }

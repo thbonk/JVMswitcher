@@ -12,8 +12,9 @@
 		B3DDB543294B0E8900C16BB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3DDB542294B0E8900C16BB8 /* Assets.xcassets */; };
 		B3DDB546294B0E8900C16BB8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3DDB545294B0E8900C16BB8 /* Preview Assets.xcassets */; };
 		E9A5F886299F544D0045EBF0 /* NSApplication+standardPanels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A5F885299F544D0045EBF0 /* NSApplication+standardPanels.swift */; };
+		E9A5F888299F9A9E0045EBF0 /* JVMInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A5F887299F9A9E0045EBF0 /* JVMInformationView.swift */; };
 		E9D3B714294C536400AE73A2 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E9D3B713294C536400AE73A2 /* Credits.rtf */; };
-		E9E352E42951ADEC00C4217C /* JVMMenuBarExtra.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E352E32951ADEC00C4217C /* JVMMenuBarExtra.swift */; };
+		E9E352E42951ADEC00C4217C /* JVMList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E352E32951ADEC00C4217C /* JVMList.swift */; };
 		E9E353042966A49E00C4217C /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E353032966A49E00C4217C /* Notification.swift */; };
 		E9E35306296D7ECC00C4217C /* ApplicationSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E35305296D7ECC00C4217C /* ApplicationSettingsView.swift */; };
 		E9E35309296D7FCF00C4217C /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = E9E35308296D7FCF00C4217C /* LaunchAtLogin */; };
@@ -30,8 +31,9 @@
 		B3DDB547294B0E8900C16BB8 /* JVMswitcher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JVMswitcher.entitlements; sourceTree = "<group>"; };
 		B3DDB54D294B0EBF00C16BB8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E9A5F885299F544D0045EBF0 /* NSApplication+standardPanels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSApplication+standardPanels.swift"; sourceTree = "<group>"; };
+		E9A5F887299F9A9E0045EBF0 /* JVMInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JVMInformationView.swift; sourceTree = "<group>"; };
 		E9D3B713294C536400AE73A2 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
-		E9E352E32951ADEC00C4217C /* JVMMenuBarExtra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JVMMenuBarExtra.swift; sourceTree = "<group>"; };
+		E9E352E32951ADEC00C4217C /* JVMList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JVMList.swift; sourceTree = "<group>"; };
 		E9E353032966A49E00C4217C /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		E9E35305296D7ECC00C4217C /* ApplicationSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationSettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,8 +72,9 @@
 		B3B689A2294B44A400419357 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E9E352E32951ADEC00C4217C /* JVMMenuBarExtra.swift */,
+				E9E352E32951ADEC00C4217C /* JVMList.swift */,
 				E9E35305296D7ECC00C4217C /* ApplicationSettingsView.swift */,
+				E9A5F887299F9A9E0045EBF0 /* JVMInformationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -226,8 +229,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9E35306296D7ECC00C4217C /* ApplicationSettingsView.swift in Sources */,
+				E9A5F888299F9A9E0045EBF0 /* JVMInformationView.swift in Sources */,
 				E9A5F886299F544D0045EBF0 /* NSApplication+standardPanels.swift in Sources */,
-				E9E352E42951ADEC00C4217C /* JVMMenuBarExtra.swift in Sources */,
+				E9E352E42951ADEC00C4217C /* JVMList.swift in Sources */,
 				E9E353042966A49E00C4217C /* Notification.swift in Sources */,
 				B3B689A5294B458D00419357 /* InstalledJavaVirtualMachinesModel.swift in Sources */,
 				B3DDB53F294B0E8600C16BB8 /* JVMswitcherApp.swift in Sources */,

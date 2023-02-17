@@ -1,5 +1,5 @@
 //
-//  JVMMenuBarExtra.swift
+//  JVMList.swift
 //  JVMswitcher
 //
 //  Created by Thomas Bonk on 20.12.22.
@@ -20,7 +20,7 @@
 
 import SwiftUI
 
-struct JVMMenuBarExtra: View {
+struct JVMList: View {
 
     // MARK: - Public Properties
 
@@ -71,6 +71,6 @@ struct JVMMenuBarExtra: View {
 
 struct JVMMenuBarExtra_Previews: PreviewProvider {
     static var previews: some View {
-        JVMMenuBarExtra()
+        JVMList()
     }
 }
