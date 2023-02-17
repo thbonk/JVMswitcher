@@ -31,7 +31,7 @@ class InstalledJavaVirtualMachinesModel: ObservableObject {
     
     // MARK: - Virtual Machone Description
     
-    struct VirtualMachine: Identifiable {
+    struct VirtualMachine: Identifiable, Hashable {
         let version: String
         let architecture: String
         let vendor: String
